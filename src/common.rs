@@ -45,3 +45,37 @@ impl Right for String{
         
     
 }
+    pub trait Strip{
+        fn strip(self, s: &str) -> String;
+    }
+    impl Strip for String{
+        fn strip(self, s: &str) -> String{
+            let result = self.clone();
+            result.replace(s, "")
+        }
+    }
+
+pub trait StripChars{
+    fn strip_chars(self, chars: &str) -> String;
+}
+impl StripChars for String{
+    fn strip_chars(self, chars: &str) -> String{
+        let mut result = self.clone();
+        for c in chars.chars(){
+            result = result.replace(c, "");
+        }
+        result
+    }
+}    
+
+pub trait Reverse{
+    fn reverse(self) -> String;
+
+}
+impl Reverse for String{
+    fn reverse(self) -> String{
+        let mut result = self.clone();
+        result = result.chars().rev().collect();
+        result
+    }
+}
