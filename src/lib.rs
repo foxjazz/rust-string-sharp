@@ -2,6 +2,7 @@ pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
 mod common;
+mod string_date;
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -11,6 +12,8 @@ use common::Right;
 use common::Strip;
 use common::StripChars;
 use common::Reverse;
+use string_date::AppendDate;
+use string_date::AppendTime;
 
     #[test]
     fn test_append() {
@@ -49,4 +52,9 @@ use common::Reverse;
         assert_eq!(result, "god yzal eht revo spmuj xof nworb kciuq eht".to_string());
     }
 
+    fn test_append_date() {
+        let s = "the quick brown fox jumps over the lazy dog".to_string();
+        let result = s.ymd();
+        assert_eq!(result, "the quick brown fox jumps over the lazy dog-2022-12-17".to_string());
+    }
 }
