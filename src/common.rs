@@ -79,3 +79,52 @@ impl Reverse for String{
         result
     }
 }
+
+pub trait IndexOf{
+    fn index_of(self, s: &str) -> i32;
+}
+impl IndexOf for String{
+    fn index_of(self, s: &str) -> i32{
+        let new_str = self.as_str();
+        let result = new_str.find(s);
+        match result{
+            Some(i) => i as i32,
+            None => -1
+        }   
+     }
+}
+pub trait IndiciesOf{
+    fn indicies_of(self, s: &str) -> i32;
+}
+impl IndiciesOf for String{
+    
+    fn indicies_of(self, s: &str) -> i32{
+        let len_self = self.len();
+        let mut adder = 0;
+        let searchlen = s.len();
+        let mut idx: usize = 0;
+        let new_str = self.as_str();
+        let mut result = new_str.find(s);
+        if result == None{
+            return 0;
+        }
+        idx = result.unwrap() + searchlen;
+        while result != None{
+            adder += 1;
+            if idx >= len_self{
+                break;
+            }
+            let nnstr = &new_str[idx..];
+            result = nnstr.find(s);
+            if result == None{
+                break;
+            }
+            idx += result.unwrap() + searchlen;
+        }
+        adder
+
+     }
+
+}
+
+

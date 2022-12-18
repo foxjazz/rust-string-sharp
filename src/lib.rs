@@ -6,12 +6,7 @@ mod string_date;
 #[cfg(test)]
 mod tests {
     use super::*;
-use common::Append;
-use common::Left;
-use common::Right;
-use common::Strip;
-use common::StripChars;
-use common::Reverse;
+use common::*;
 use string_date::AppendDate;
 use string_date::AppendTime;
 
@@ -56,5 +51,23 @@ use string_date::AppendTime;
         let s = "the quick brown fox jumps over the lazy dog".to_string();
         let result = s.ymd();
         assert_eq!(result, "the quick brown fox jumps over the lazy dog-2022-12-17".to_string());
+    }
+    #[test]
+    fn test_index_of(){
+        let s = "the quick brown fox jumps over the lazy dog".to_string();
+        let result = s.index_of("the");
+        assert_eq!(result, 0);
+        let s1 = "the quick brown fox jumps over the lazy dog".to_string();
+        let result2 = s1.index_of("biggy");
+        assert_eq!(result2, -1);
+    }
+    #[test]
+    fn test_indicies_of(){
+        let s = "the quick brown fox jumps over the lazy dog".to_string();
+        let result = s.indicies_of("the");
+        assert_eq!(result, 2);
+        let s1 = "the quick brown fox jumps over the lazy dog".to_string();
+        let result2 = s1.indicies_of("biggy");
+        assert_eq!(result2, 0);
     }
 }

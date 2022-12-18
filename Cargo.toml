@@ -1,6 +1,6 @@
 [package]
 name = "string-sharp"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description = "traits implementing on string similar to c#"
 license = "MIT"
