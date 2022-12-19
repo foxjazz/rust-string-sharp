@@ -1,4 +1,6 @@
-
+//! Common functions and traits for the library which has similar functions to string c# library
+//! This tool is intended to be used by rust developers coming from a c# background
+//! 
 /// appends the argument to the string
 pub trait Append {
         fn append(self, appender: String) -> String;

@@ -1,5 +1,5 @@
 
-
+//! this module appends date and time to a given string
 /// returns format of yyyy-mm-dd  
 /// 
 /// 

@@ -1,3 +1,6 @@
+//! Common functions and traits for the library which has similar functions to string c# library
+//! This tool is intended to be used by rust developers coming from a c# background
+//! 
 #![crate_name = "string_sharp"]
 
 #![crate_type = "lib"]
