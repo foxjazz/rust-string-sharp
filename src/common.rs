@@ -1,3 +1,5 @@
+
+/// appends the argument to the string
 pub trait Append {
         fn append(self, appender: String) -> String;
 }
@@ -11,6 +13,7 @@ impl Append for String {
         }
 }
 
+/// returns the leftmost characters of the string
 pub trait Left{
     fn left(self, length: usize) -> Result<String, String>;
 }
@@ -24,6 +27,8 @@ impl Left for String{
         Ok(ss_new.to_string())
      }
 }
+
+/// returns the rightmost characters of the string
 pub trait Right{
     fn right(self, length: usize) -> Result<String, String>;
 }
@@ -45,6 +50,7 @@ impl Right for String{
         
     
 }
+/// removes the argument from the string
     pub trait Strip{
         fn strip(self, s: &str) -> String;
     }
@@ -54,7 +60,7 @@ impl Right for String{
             result.replace(s, "")
         }
     }
-
+/// strips the characters from the string
 pub trait StripChars{
     fn strip_chars(self, chars: &str) -> String;
 }
@@ -67,7 +73,7 @@ impl StripChars for String{
         result
     }
 }    
-
+/// reverses the string
 pub trait Reverse{
     fn reverse(self) -> String;
 
@@ -79,7 +85,7 @@ impl Reverse for String{
         result
     }
 }
-
+/// finding position of first occurance of a string
 pub trait IndexOf{
     fn index_of(self, s: &str) -> i32;
 }
@@ -93,6 +99,7 @@ impl IndexOf for String{
         }   
      }
 }
+/// counting the number of occurances of a string
 pub trait IndiciesOf{
     fn indicies_of(self, s: &str) -> i32;
 }

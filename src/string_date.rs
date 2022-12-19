@@ -1,9 +1,12 @@
+
+
 /// returns format of yyyy-mm-dd  
 /// 
 /// 
 
 use chrono::prelude::*;
 
+/// appends the date to the string
 pub trait AppendDate{
     fn ymd(self) -> String;
 }
@@ -18,7 +21,7 @@ impl AppendDate for String{
         result
     }
 }
-/// returns format of hh:mm:ss
+/// appends time in format of hh:mm:ss
 pub trait AppendTime{
     fn hms(self) -> String;
 }

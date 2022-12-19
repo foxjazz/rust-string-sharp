@@ -1,14 +1,15 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+#![crate_name = "string_sharp"]
+
+#![crate_type = "lib"]
+
 mod common;
 mod string_date;
 #[cfg(test)]
 mod tests {
     use super::*;
 use common::*;
-use string_date::AppendDate;
-use string_date::AppendTime;
+use string_date::*;
+
 
     #[test]
     fn test_append() {
