@@ -1,9 +1,5 @@
 
 /Cargo.lock
-target/debug
-target/package
-target/.*
-target/cached*
 *.pdb
 **/*.rs.bk
 tests/*
