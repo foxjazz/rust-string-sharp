@@ -19,10 +19,7 @@ github = { repository = "foxjazz/rust-string-sharp" }
 [dependencies]
 chrono="0.4.23"
 
-[features]
-default = ["chrono"]
 
-[release]
 
-# publish = false
+
 
