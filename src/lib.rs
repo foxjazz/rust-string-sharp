@@ -65,10 +65,36 @@ use string_date::*;
     #[test]
     fn test_indicies_of(){
         let s = "the quick brown fox jumps over the lazy dog".to_string();
+        // s.to
         let result = s.indicies_of("the");
         assert_eq!(result, 2);
         let s1 = "the quick brown fox jumps over the lazy dog".to_string();
         let result2 = s1.indicies_of("biggy");
         assert_eq!(result2, 0);
+    }
+
+    #[test]
+    fn test_trim_end(){
+        let s = "the quick brown fox jumps over the lazy dog   ".to_string();
+        let result = s.trim_end(' ');
+        assert_eq!(result, "the quick brown fox jumps over the lazy dog".to_string());
+    }
+    #[test]
+    fn test_trim_start(){
+        let s = "   the quick brown fox jumps over the lazy dog".to_string();
+        let result = s.trim_start(' ');
+        assert_eq!(result, "the quick brown fox jumps over the lazy dog".to_string());
+    }
+
+    #[test]
+    fn test_to_upper(){
+        let s = "the quick brown fox jumps over the lazy dog".to_string();
+        let result = s.to_upper();
+        assert_eq!(result, "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG".to_string());
+    }
+    fn test_to_lower(){
+        let s = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG".to_string();
+        let result = s.to_lower();
+        assert_eq!(result, "the quick brown fox jumps over the lazy dog".to_string());
     }
 }

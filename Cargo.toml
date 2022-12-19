@@ -1,6 +1,6 @@
 [package]
 name = "string-sharp"
-version = "0.1.7"
+version = "0.1.8"
 edition = "2021"
 description = "traits implementing on string similar to c#"
 license = "MIT"
@@ -18,3 +18,11 @@ github = { repository = "foxjazz/rust-string-sharp" }
 
 [dependencies]
 chrono="0.4.23"
+
+[features]
+default = ["chrono"]
+
+[release]
+
+# publish = false
+
