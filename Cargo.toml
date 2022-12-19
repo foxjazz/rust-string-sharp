@@ -1,9 +1,16 @@
 [package]
 name = "string-sharp"
-version = "0.1.5"
+version = "0.1.7"
 edition = "2021"
 description = "traits implementing on string similar to c#"
 license = "MIT"
+authors = ["foxjazz <aws@foxjazz.net>"]
+documentation = "https://docs.rs/string-sharp"
+
+[badges]
+github = { repository = "foxjazz/rust-string-sharp" }
+
+
 # donate_litecoin = LRyqEsNLk8rvVVkSqMrrXG82mqjpsVXvEH 
 # donate_paypal = https://www.paypal.com/donate/?business=A9BBJRDL8QG9J&no_recurring=0&item_name=support+for+open+source&currency_code=USD
 # if you find this useful, please donate to support the project

@@ -116,7 +116,7 @@ impl IndiciesOf for String{
             return 0;
         }
         idx = result.unwrap() + searchlen;
-        while result != None{
+        loop{
             adder += 1;
             if idx >= len_self{
                 break;
