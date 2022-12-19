@@ -1,11 +1,12 @@
 [package]
 name = "string-sharp"
-version = "0.1.8"
+version = "0.1.9"
 edition = "2021"
 description = "traits implementing on string similar to c#"
 license = "MIT"
 authors = ["foxjazz <aws@foxjazz.net>"]
 documentation = "https://docs.rs/string-sharp"
+repository = "https://github.com/foxjazz/rust-string-sharp"
 
 [badges]
 github = { repository = "foxjazz/rust-string-sharp" }
